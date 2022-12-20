@@ -46,5 +46,5 @@ body {
     width: calc(var(--percentage) * (37 / 105));
 }
 #Homepage footer {
-    font-size: calc(var(--textSize) * 0.9)
+    font-size: calc(var(--textSize) * 0.9);
 }

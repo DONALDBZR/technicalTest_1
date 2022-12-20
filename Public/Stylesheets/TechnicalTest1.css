@@ -2,9 +2,21 @@
 :root {
     --percentage: 100%;
     --color1: rgb(var(--percentage), var(--percentage), var(--percentage));
-    --color2: rgb(calc(var(--percentage) * 0), calc(var(--percentage) * 0), calc(var(--percentage) * 0));
-    --color3: rgb(calc(var(--percentage) / 16), calc(var(--percentage) / 16), calc(var(--percentage) / 16));
-    --color4: rgb(calc(var(--percentage) * 0), calc(var(--percentage) / 2), var(--percentage));
+    --color2: rgb(
+        calc(var(--percentage) * 0),
+        calc(var(--percentage) * 0),
+        calc(var(--percentage) * 0)
+    );
+    --color3: rgb(
+        calc(var(--percentage) / 16),
+        calc(var(--percentage) / 16),
+        calc(var(--percentage) / 16)
+    );
+    --color4: rgb(
+        calc(var(--percentage) * 0),
+        calc(var(--percentage) / 2),
+        var(--percentage)
+    );
 }
 body {
     font-family: sans-serif;
