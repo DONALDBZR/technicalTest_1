@@ -15,7 +15,7 @@ class Application extends React.Component {
  */
 class Header extends Application {
     render() {
-        return <header>Parkinston</header>;
+        return <header>Customer Application</header>;
     }
 }
 /**
@@ -25,28 +25,21 @@ class Main extends Application {
     render() {
         return (
             <main>
-                <div id="notice">
-                    In order to use the application, you need to have the permissions
-                    required.
-                </div>
-                <div id="buttons">
+                <header>
+                    <div>Home</div>
                     <div>
-                        <a href="/Login">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Login
-                        </a>
+                        <a href="/Customers/New">Create New</a>
                     </div>
+                </header>
+                <div>
                     <div>
-                        <a href="/Register">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            Register
-                        </a>
+                        <div>Title</div>
+                        <div>First Name</div>
+                        <div>Middle Name</div>
+                        <div>Last Name</div>
+                        <div>Email</div>
+                        <div>Active</div>
+                        <div>Date Created</div>
                     </div>
                 </div>
             </main>
@@ -58,7 +51,7 @@ class Main extends Application {
  */
 class Footer extends Application {
     render() {
-        return <footer>Parkinston</footer>;
+        return <footer>Application</footer>;
     }
 }
 // Rendering the page
