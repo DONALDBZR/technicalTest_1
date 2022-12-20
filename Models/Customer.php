@@ -109,4 +109,52 @@ class Customer
     {
         $this->dateCreated = date("Y.m.d H:i:s ");
     }
+    /**
+     * Creating the customer
+     */
+    public function create(): void
+    {
+        $request = json_decode(file_get_contents("php://input"));
+        $this->setTitle($request->title);
+        $this->setFirstName($request->firstName);
+        $this->setMiddleName($request->middleName);
+        $this->setLastName($request->lastName);
+        $this->setMailAddress($request->mailAddress);
+        if ($request->active == 0) {
+            $this->setActive(false);
+        } else if ($request->active == 1) {
+            $this->setActive(true);
+        } else {
+            $response = array(
+                "status" => 1,
+                "message" => "Incorrect Form",
+                "url" => $_SERVER['HTTP_REFERER']
+            );
+        }
+        $this->setDateCreated();
+        if ($this->getFirstName() != null && $this->getMiddleName() != null && $this->getMailAddress() != null && str_contains($this->getMailAddress(), "@") && str_contains($this->getMailAddress(), ".")) {
+            $this->PDO->query("INSERT INTO TechnicalTest1.Customers(CustomersTitle, CustomersFirstName, CustomersMiddleName, CustomersLastName, CustomersMailAddress, CustomersActive, CustomersDateCreated) VALUES (:CustomersTitle, :CustomersFirstName, :CustomersMiddleName, :CustomersLastName, :CustomersMailAddress, :CustomersActive, :CustomersDateCreated)");
+            $this->PDO->bind(":CustomersTitle", $this->getTitle());
+            $this->PDO->bind(":CustomersFirstName", $this->getFirstName());
+            $this->PDO->bind(":CustomersMiddleName", $this->getMiddleName());
+            $this->PDO->bind(":CustomersLastName", $this->getLastName());
+            $this->PDO->bind(":CustomersMailAddress", $this->getMailAddress());
+            $this->PDO->bind(":CustomersActive", $this->getActive());
+            $this->PDO->bind(":CustomersDateCreated", $this->getDateCreated());
+            $this->PDO->execute();
+            $response = array(
+                "status" => 0,
+                "message" => "Customer Created!",
+                "url" => "http://{$_SERVER['HTTP_HOST']}"
+            );
+        } else {
+            $response = array(
+                "status" => 1,
+                "message" => "Incorrect Form",
+                "url" => $_SERVER['HTTP_REFERER']
+            );
+        }
+        header('Content-Type: application/json', true, 300);
+        echo json_encode($response);
+    }
 }
