@@ -7,7 +7,7 @@ class Application extends React.Component {
         this.state = {
             /**
              * Title of the customer
-             * @type {string}
+             * @type {?string}
              */
             title: "",
             /**
@@ -17,7 +17,7 @@ class Application extends React.Component {
             firstName: "",
             /**
              * Last name of the customer
-             * @type {string}
+             * @type {?string}
              */
             lastName: "",
             /**
@@ -34,7 +34,7 @@ class Application extends React.Component {
              * Activation status of the customer
              * @type {int}
              */
-            active: 0,
+            active: 2,
             /**
              * The status returned from the request
              * @type {int}
@@ -103,6 +103,17 @@ class Application extends React.Component {
         setTimeout(() => {
             window.location.href = this.state.url;
         }, delay);
+    }
+    /**
+     * Handling the response from the server
+     * @returns {string}
+     */
+    handleResponseColor() {
+        if (this.state.status == 0) {
+            return "rgb(0%, 100%, 0%)";
+        } else {
+            return "rgb(100%, 0%, 0%)";
+        }
     }
     /**
      * Renders the components that are being returned
@@ -180,6 +191,9 @@ class Main extends Application {
                     </div>
                     <div>
                         <button>Create</button>
+                    </div>
+                    <div id="response">
+                        <h1 style={{ color: this.handleResponseColor() }}>{this.state.message}</h1>
                     </div>
                 </form>
                 <div>
