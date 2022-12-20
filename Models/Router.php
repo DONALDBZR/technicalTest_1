@@ -22,48 +22,39 @@ class Router
      * The method of the request
      */
     private string $requestMethod;
-    // Constructor method
     public function __construct(string $requestMethod, string $route, string $path)
     {
         $this->setRoot($_SERVER['DOCUMENT_ROOT']);
         $this->verifyRequestMethod($requestMethod, $route, $path);
     }
-    // Route accessor method
     public function getRoute()
     {
         return $this->route;
     }
-    // Route mutator method
     public function setRoute(string $route)
     {
         $this->route = $route;
     }
-    // Path accessor method
     public function getPath()
     {
         return $this->path;
     }
-    // Path mutator method
     public function setPath(string $path)
     {
         $this->path = $path;
     }
-    // Root accessor method
     public function getRoot()
     {
         return $this->root;
     }
-    // Root mutator method
     public function setRoot(string $root)
     {
         $this->root = $root;
     }
-    // Request Method accessor method
     public function getRequestMethod()
     {
         return $this->requestMethod;
     }
-    // Request Method mutator method
     public function setRequestMethod(string $requestMethod)
     {
         $this->requestMethod = $requestMethod;
