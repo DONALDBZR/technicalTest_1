@@ -11,21 +11,26 @@ body {
     font-size: var(--textSize);
     margin: calc(var(--percentage) * 0);
 }
-#Homepage header {
+#Homepage header,
+body[id*="Customers"] header {
     padding: calc(var(--percentage) / 100);
     font-size: calc(var(--textSize) * 1.8);
 }
-#Homepage main {
+#Homepage main,
+body[id*="Customers"] main {
     margin: calc(var(--percentage) / 100);
 }
-#Homepage main header {
+#Homepage main header,
+body[id*="Customers"] main header {
     padding: calc(var(--percentage) * 0);
     font-size: var(--textSize);
 }
-#Homepage main header div {
+#Homepage main header div,
+body[id*="Customers"] main header div {
     margin: calc(var(--percentage) / 200) calc(var(--percentage) * 0);
 }
-#Homepage main header div:nth-child(1) {
+#Homepage main header div:nth-child(1),
+body[id*="Customers"] main header div:nth-child(1) {
     font-size: calc(var(--textSize) * 2);
 }
 #Homepage main div div {
@@ -47,4 +52,45 @@ body {
 }
 #Homepage footer {
     font-size: calc(var(--textSize) * 0.9);
+}
+body[id*="Customers"] main form {
+    width: calc(var(--percentage) / 4);
+    padding: calc(var(--percentage) * 0) calc(var(--percentage) * (3 / 8));
+}
+body[id*="Customers"] main form div {
+    display: flex;
+    width: var(--percentage);
+    margin: calc(var(--percentage) / 50) calc(var(--percentage) * 0);
+}
+body[id*="Customers"] main form div div {
+    display: block;
+    margin: calc(var(--percentage) * 0);
+    width: calc(var(--percentage) / 2);
+}
+body[id*="Customers"] main form div div:nth-child(1) {
+    width: calc(var(--percentage) / 3);
+}
+body[id*="Customers"] main form div div:nth-child(2) {
+    width: calc(var(--percentage) * (2 / 3));
+}
+body[id*="Customers"] main form div div:nth-child(2) input {
+    width: -webkit-fill-available;
+}
+body[id*="Customers"] main form div:nth-child(6) div:nth-child(2) {
+    display: flex;
+}
+body[id*="Customers"] main form div:nth-child(6) div:nth-child(2) div {
+    display: block;
+    width: calc(var(--percentage) / 2);
+}
+body[id*="Customers"] main form div:nth-child(6) div:nth-child(2) div input {
+    width: unset;
+}
+body[id*="Customers"] main form div:nth-child(7) {
+    justify-content: center;
+}
+body[id*="Customers"] main form div:nth-child(7) button {
+    padding: calc(var(--percentage) / 80) calc(var(--percentage) / 40);
+    font-size: calc(var(--textSize) * 1.1);
+    border: none;
 }
