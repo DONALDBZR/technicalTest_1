@@ -1,0 +1,34 @@
+/* Variables */
+:root {
+    --percentage: 100%;
+    --color1: rgb(var(--percentage), var(--percentage), var(--percentage));
+    --color2: rgb(calc(var(--percentage) * 0), calc(var(--percentage) * 0), calc(var(--percentage) * 0));
+    --color3: rgb(calc(var(--percentage) / 16), calc(var(--percentage) / 16), calc(var(--percentage) / 16));
+    --color4: rgb(calc(var(--percentage) * 0), calc(var(--percentage) / 2), var(--percentage));
+}
+body {
+    font-family: sans-serif;
+    color: var(--color2);
+    background-color: var(--color1);
+}
+#Homepage header {
+    background-color: var(--color3);
+    color: var(--color1);
+}
+#Homepage main header {
+    background-color: var(--color1);
+    color: var(--color3);
+}
+#Homepage main header div:nth-child(2) a {
+    color: var(--color4);
+    text-decoration: none;
+}
+#Homepage main header div:nth-child(2) a:hover {
+    text-decoration: underline;
+}
+#Homepage main div div {
+    font-weight: bold;
+}
+#Homepage footer {
+    text-align: center;
+}
