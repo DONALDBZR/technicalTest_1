@@ -14,7 +14,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case 'POST':
         switch ($_SERVER['REQUEST_URI']) {
             case '/Customers/Create':
-                $Router = new Router("GET", "/Customers/Create", "/Controllers/CustomersCreate.php");
+                $Router = new Router("POST", "/Customers/Create", "/Controllers/CustomersCreate.php");
                 break;
         }
 }
