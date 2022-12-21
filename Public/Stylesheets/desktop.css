@@ -94,3 +94,11 @@ body[id*="Customers"] main form div:nth-child(7) button {
     font-size: calc(var(--textSize) * 1.1);
     border: none;
 }
+body[id*="Customers"] main form #response {
+    margin: calc(var(--percentage) / 100) calc(var(--percentage) * 0);
+    width: var(--percentage);
+    justify-content: center;
+}
+body[id*="Customers"] main form #response h1 {
+    margin: calc(var(--percentage) * 0);
+}

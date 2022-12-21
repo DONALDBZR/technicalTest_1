@@ -69,9 +69,9 @@ class Application extends React.Component {
      * @param {Event} event
      */
     handleSubmit(event) {
-        const delay = 3600000;
+        const delay = 3100;
         event.preventDefault();
-        fetch("/Customers/Create", {
+        fetch("/Controllers/CustomersCreate.php", {
             method: "POST",
             body: JSON.stringify({
                 title: this.state.title,
@@ -82,7 +82,7 @@ class Application extends React.Component {
                 active: this.state.active,
             }),
             headers: {
-                "Content-Type": "application/json",
+                'Content-Type': 'application/json'
             },
         })
             .then((response) => response.json())
