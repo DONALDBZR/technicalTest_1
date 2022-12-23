@@ -34,10 +34,10 @@ class Application extends React.Component {
      * @returns {string}
      */
     handleTitleSort() {
-        if (window.location.pathname.includes("?Title=ASC")) {
-            return "/?Title=DESC";
+        if (window.location.pathname.includes("Title=ASC")) {
+            return "/Title=DESC";
         } else {
-            return "/?Title=ASC";
+            return "/Title=ASC";
         }
     }
     /**
