@@ -11,29 +11,24 @@ body {
     font-size: var(--textSize);
     margin: calc(var(--percentage) * 0);
 }
-#Homepage header,
-body[id*="Customers"] header {
+header {
     padding: calc(var(--percentage) / 100);
     font-size: calc(var(--textSize) * 1.8);
 }
-#Homepage main,
-body[id*="Customers"] main {
+main {
     margin: calc(var(--percentage) / 100);
 }
-#Homepage main header,
-body[id*="Customers"] main header {
+main header {
     padding: calc(var(--percentage) * 0);
     font-size: var(--textSize);
 }
-#Homepage main header div,
-body[id*="Customers"] main header div {
+main header div {
     margin: calc(var(--percentage) / 200) calc(var(--percentage) * 0);
 }
-#Homepage main header div:nth-child(1),
-body[id*="Customers"] main header div:nth-child(1) {
+main header div:nth-child(1) {
     font-size: calc(var(--textSize) * 2);
 }
-#Homepage main div div {
+main div div {
     display: flex;
     width: var(--percentage);
     border: solid calc(var(--pixelate) / 1080) var(--color5);
@@ -41,13 +36,13 @@ body[id*="Customers"] main header div:nth-child(1) {
     border-left: unset;
     border-right: unset;
 }
-#Homepage main div div div {
+main div div div {
     display: flex;
     width: calc(var(--percentage) / 7);
     border: unset;
     padding: calc(var(--percentage) * 0);
 }
-#Homepage footer {
+footer {
     font-size: calc(var(--textSize) * 0.9);
 }
 body[id*="Customers"] main form {
@@ -99,56 +94,56 @@ body[id*="Customers"] main form #response {
 body[id*="Customers"] main form #response h1 {
     margin: calc(var(--percentage) * 0);
 }
-#Homepage main div div div:nth-child(1) {
+main div div div:nth-child(1) {
     width: calc(var(--percentage) / 28);
 }
-#Homepage main div div div:nth-child(6) {
+main div div div:nth-child(6) {
     width: calc(var(--percentage) / 21);
 }
-#Homepage main div div div:nth-child(7) {
+main div div div:nth-child(7) {
     width: calc(var(--percentage) / 9);
 }
-#Homepage main div div div:nth-child(5) {
+main div div div:nth-child(5) {
     width: calc(var(--percentage) * (95 / 252));
 }
-#Homepage main div div div div {
+main div div div div {
     display: block;
 }
-#Homepage main div div div:nth-child(1) div:nth-child(1) {
+main div div div:nth-child(1) div:nth-child(1) {
     width: calc(var(--percentage) * 0.75);
 }
-#Homepage main div div div:nth-child(1) div:nth-child(2) {
+main div div div:nth-child(1) div:nth-child(2) {
     width: calc(var(--percentage) / 4);
 }
-#Homepage main div div div:nth-child(2) div:nth-child(1),
-#Homepage main div div div:nth-child(4) div:nth-child(1) {
+main div div div:nth-child(2) div:nth-child(1),
+main div div div:nth-child(4) div:nth-child(1) {
     width: calc(var(--percentage) * 0.44);
 }
-#Homepage main div div div:nth-child(2) div:nth-child(2),
-#Homepage main div div div:nth-child(4) div:nth-child(2) {
+main div div div:nth-child(2) div:nth-child(2),
+main div div div:nth-child(4) div:nth-child(2) {
     width: calc(var(--percentage) * 0.56);
 }
-#Homepage main div div div:nth-child(3) div:nth-child(1) {
+main div div div:nth-child(3) div:nth-child(1) {
     width: calc(var(--percentage) * 0.53);
 }
-#Homepage main div div div:nth-child(3) div:nth-child(2) {
+main div div div:nth-child(3) div:nth-child(2) {
     width: calc(var(--percentage) * 0.47);
 }
-#Homepage main div div div:nth-child(6) div:nth-child(1) {
+main div div div:nth-child(6) div:nth-child(1) {
     width: calc(var(--percentage) * 0.8);
 }
-#Homepage main div div div:nth-child(6) div:nth-child(2) {
+main div div div:nth-child(6) div:nth-child(2) {
     width: calc(var(--percentage) / 5);
 }
-#Homepage main div div div:nth-child(7) div:nth-child(1) {
+main div div div:nth-child(7) div:nth-child(1) {
     width: calc(var(--percentage) * (2 / 3));
 }
-#Homepage main div div div:nth-child(7) div:nth-child(2) {
+main div div div:nth-child(7) div:nth-child(2) {
     width: calc(var(--percentage) / 3);
 }
-#Homepage main div div div:nth-child(5) div:nth-child(1) {
+main div div div:nth-child(5) div:nth-child(1) {
     width: calc(var(--percentage) / 11);
 }
-#Homepage main div div div:nth-child(5) div:nth-child(2) {
+main div div div:nth-child(5) div:nth-child(2) {
     width: calc(var(--percentage) * (10 / 11));
 }

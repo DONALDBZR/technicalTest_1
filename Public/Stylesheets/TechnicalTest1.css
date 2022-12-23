@@ -28,31 +28,28 @@ body {
     color: var(--color2);
     background-color: var(--color1);
 }
-#Homepage header,
-body[id*="Customers"] header {
+header {
     background-color: var(--color3);
     color: var(--color1);
 }
-#Homepage main header,
-body[id*="Customers"] main header {
+main header {
     background-color: var(--color1);
     color: var(--color3);
 }
-#Homepage main header div:nth-child(2) a,
+main header div:nth-child(2) a,
 body[id*="Customers"] main div a,
-#Homepage main div div div a {
+main div div div a {
     color: var(--color4);
     text-decoration: none;
 }
-#Homepage main header div:nth-child(2) a:hover,
+main header div:nth-child(2) a:hover,
 body[id*="Customers"] main div a:hover {
     text-decoration: underline;
 }
-#Homepage main div div:nth-child(1) div {
+main div div:nth-child(1) div {
     font-weight: bold;
 }
-#Homepage footer,
-body[id*="Customers"] footer {
+footer {
     text-align: center;
 }
 body[id*="Customers"] main form div div:nth-child(1) {
@@ -70,9 +67,9 @@ body[id*="Customers"] main form div:nth-child(7) button:hover {
     background-color: var(--color1);
     color: var(--color2);
 }
-#Homepage main div div div {
+main div div div {
     font-weight: normal;
 }
-#Homepage main div div div a:hover {
+main div div div a:hover {
     color: var(--color2);
 }
