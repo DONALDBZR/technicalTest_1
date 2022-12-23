@@ -17,6 +17,11 @@
         calc(var(--percentage) / 2),
         var(--percentage)
     );
+    --color5: rgb(
+        calc(var(--percentage) / 2),
+        calc(var(--percentage) / 2),
+        calc(var(--percentage) / 2)
+    );
 }
 body {
     font-family: sans-serif;
@@ -34,15 +39,17 @@ body[id*="Customers"] main header {
     color: var(--color3);
 }
 #Homepage main header div:nth-child(2) a,
-body[id*="Customers"] main div a {
+body[id*="Customers"] main div a,
+#Homepage main div div div a {
     color: var(--color4);
     text-decoration: none;
 }
 #Homepage main header div:nth-child(2) a:hover,
-body[id*="Customers"] main div a:hover {
+body[id*="Customers"] main div a:hover,
+#Homepage main div div div a:hover {
     text-decoration: underline;
 }
-#Homepage main div div {
+#Homepage main div div:nth-child(1) div {
     font-weight: bold;
 }
 #Homepage footer,
@@ -63,4 +70,7 @@ body[id*="Customers"] main form div:nth-child(7) button {
 body[id*="Customers"] main form div:nth-child(7) button:hover {
     background-color: var(--color1);
     color: var(--color2);
+}
+#Homepage main div div div {
+    font-weight: normal;
 }

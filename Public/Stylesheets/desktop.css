@@ -36,10 +36,16 @@ body[id*="Customers"] main header div:nth-child(1) {
 #Homepage main div div {
     display: flex;
     width: var(--percentage);
+    border: solid calc(var(--pixelate) / 1080) var(--color5);
+    padding: calc(var(--percentage) / 200) calc(var(--percentage) * 0);
+    border-left: unset;
+    border-right: unset;
 }
 #Homepage main div div div {
     display: block;
     width: calc(var(--percentage) / 7);
+    border: unset;
+    padding: calc(var(--percentage) * 0);
 }
 #Homepage main div div div:nth-child(1) {
     width: calc(var(--percentage) / 35);
@@ -48,7 +54,7 @@ body[id*="Customers"] main header div:nth-child(1) {
     width: calc(var(--percentage) / 21);
 }
 #Homepage main div div div:nth-child(5) {
-    width: calc(var(--percentage) * (37 / 105));
+    width: calc(var(--percentage) * (363 / 945));
 }
 #Homepage footer {
     font-size: calc(var(--textSize) * 0.9);
@@ -101,4 +107,7 @@ body[id*="Customers"] main form #response {
 }
 body[id*="Customers"] main form #response h1 {
     margin: calc(var(--percentage) * 0);
+}
+#Homepage main div div div:nth-child(7) {
+    width: calc(var(--percentage) / 9);
 }

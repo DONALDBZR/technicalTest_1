@@ -36,25 +36,25 @@ body[id*="Customers"] main header div:nth-child(1) {
 #Homepage main div div {
     display: flex;
     width: var(--percentage);
-    font-size: calc(var(--textSize) * 1);
+    font-size: var(--textSize);
+    border: solid calc(var(--pixelate) / 1080) var(--color5);
+    padding: calc(var(--percentage) / 200) calc(var(--percentage) * 0);
+    border-left: unset;
+    border-right: unset;
 }
 #Homepage main div div div {
     display: block;
     width: calc(var(--percentage) / 7);
+    border: unset;
+    padding: calc(var(--percentage) * 0);
+    font-size: calc(var(--textSize) * 0.9);
 }
-#Homepage main div div div:nth-child(1) {
+#Homepage main div div div:nth-child(1),
+#Homepage main div div div:nth-child(6) {
     width: calc(var(--percentage) / 14);
 }
-#Homepage main div div div:nth-child(6) {
-    width: calc(var(--percentage) / 10);
-}
-#Homepage main div div div:nth-child(2),
-#Homepage main div div div:nth-child(3),
-#Homepage main div div div:nth-child(4),
-#Homepage main div div div:nth-child(5),
-#Homepage main div div div:nth-child(7) {
-    font-size: calc(var(--textSize) * 0.9);
-    width: calc(var(--percentage) * (116 / 700));
+#Homepage main div div div:nth-child(5) {
+    width: calc(var(--percentage) * (2 / 7));
 }
 #Homepage footer {
     font-size: calc(var(--textSize) * 0.9);
@@ -106,4 +106,8 @@ body[id*="Customers"] main form #response {
 }
 body[id*="Customers"] main form #response h1 {
     margin: calc(var(--percentage) * 0);
+}
+#Homepage main div div:nth-child(1) div,
+#Homepage main div div div:nth-child(5) {
+    font-size: calc(var(--textSize) * 0.9 * 0.9 * 0.9);
 }
