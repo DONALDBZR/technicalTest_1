@@ -146,43 +146,43 @@ class Main extends Application {
                         <div>
                             <div>Title</div>
                             <div>
-                                <a href={this.handleTitleSort()} class="fas fa-sort"></a>
+                                <a href={this.handleTitleSort()} class="fa fa-sort"></a>
                             </div>
                         </div>
                         <div>
                             <div>First Name</div>
                             <div>
-                                <a href={this.handleFirstNameSort()} class="fas fa-sort"></a>
+                                <a href={this.handleFirstNameSort()} class="fa fa-sort"></a>
                             </div>
                         </div>
                         <div>
                             <div>Middle Name</div>
                             <div>
-                                <a href={this.handleMiddleNameSort()} class="fas fa-sort"></a>
+                                <a href={this.handleMiddleNameSort()} class="fa fa-sort"></a>
                             </div>
                         </div>
                         <div>
                             <div>Last Name</div>
                             <div>
-                                <a href={this.handleLastNameSort()} class="fas fa-sort"></a>
+                                <a href={this.handleLastNameSort()} class="fa fa-sort"></a>
                             </div>
                         </div>
                         <div>
                             <div>Email</div>
                             <div>
-                                <a href={this.handleEmailSort()} class="fas fa-sort"></a>
+                                <a href={this.handleEmailSort()} class="fa fa-sort"></a>
                             </div>
                         </div>
                         <div>
                             <div>Active</div>
                             <div>
-                                <a href={this.handleActiveSort()} class="fas fa-sort"></a>
+                                <a href={this.handleActiveSort()} class="fa fa-sort"></a>
                             </div>
                         </div>
                         <div>
                             <div>Date Created</div>
                             <div>
-                                <a href={this.handleDateCreatedSort()} class="fas fa-sort"></a>
+                                <a href={this.handleDateCreatedSort()} class="fa fa-sort"></a>
                             </div>
                         </div>
                     </div>
