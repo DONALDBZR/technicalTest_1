@@ -157,4 +157,30 @@ class Customer
         header('Content-Type: application/json', true, 300);
         echo json_encode($response);
     }
+    /**
+     * Reading all the data from the database
+     */
+    public function read(): void
+    {
+        $this->PDO->query("SELECT * FROM TechnicalTest1.Customers");
+        $this->PDO->execute();
+        $customers = array();
+        for ($index = 0; $index < count($this->PDO->resultSet()); $index++) {
+            $customer = array(
+                "id" => $this->PDO->resultSet()[$index]['CustomersId'],
+                "title" => $this->PDO->resultSet()[$index]['CustomersTitle'],
+                "firstName" => $this->PDO->resultSet()[$index]['CustomersFirstName'],
+                "middleName" => $this->PDO->resultSet()[$index]['CustomersMiddleName'],
+                "lastName" => $this->PDO->resultSet()[$index]['CustomersLastName'],
+                "mailAddress" => $this->PDO->resultSet()[$index]['CustomersMailAddress'],
+                "active" => $this->PDO->resultSet()[$index]['CustomersActive'],
+                "dateCreated" => $this->PDO->resultSet()[$index]['CustomersDateCreated']
+            );
+            array_push($customers, $customer);
+        }
+        $_SESSION["Customers"] = $customers;
+        $response = $_SESSION["Customers"];
+        header('Content-Type: application/json', true, 200);
+        echo json_encode($response);
+    }
 }
