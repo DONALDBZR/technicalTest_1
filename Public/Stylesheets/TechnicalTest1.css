@@ -45,8 +45,7 @@ body[id*="Customers"] main div a,
     text-decoration: none;
 }
 #Homepage main header div:nth-child(2) a:hover,
-body[id*="Customers"] main div a:hover,
-#Homepage main div div div a:hover {
+body[id*="Customers"] main div a:hover {
     text-decoration: underline;
 }
 #Homepage main div div:nth-child(1) div {
@@ -73,4 +72,7 @@ body[id*="Customers"] main form div:nth-child(7) button:hover {
 }
 #Homepage main div div div {
     font-weight: normal;
+}
+#Homepage main div div div a:hover {
+    color: var(--color2);
 }

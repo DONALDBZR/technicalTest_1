@@ -42,19 +42,10 @@ body[id*="Customers"] main header div:nth-child(1) {
     border-right: unset;
 }
 #Homepage main div div div {
-    display: block;
+    display: flex;
     width: calc(var(--percentage) / 7);
     border: unset;
     padding: calc(var(--percentage) * 0);
-}
-#Homepage main div div div:nth-child(1) {
-    width: calc(var(--percentage) / 35);
-}
-#Homepage main div div div:nth-child(6) {
-    width: calc(var(--percentage) / 21);
-}
-#Homepage main div div div:nth-child(5) {
-    width: calc(var(--percentage) * (363 / 945));
 }
 #Homepage footer {
     font-size: calc(var(--textSize) * 0.9);
@@ -108,6 +99,56 @@ body[id*="Customers"] main form #response {
 body[id*="Customers"] main form #response h1 {
     margin: calc(var(--percentage) * 0);
 }
+#Homepage main div div div:nth-child(1) {
+    width: calc(var(--percentage) / 28);
+}
+#Homepage main div div div:nth-child(6) {
+    width: calc(var(--percentage) / 21);
+}
 #Homepage main div div div:nth-child(7) {
     width: calc(var(--percentage) / 9);
+}
+#Homepage main div div div:nth-child(5) {
+    width: calc(var(--percentage) * (95 / 252));
+}
+#Homepage main div div div div {
+    display: block;
+}
+#Homepage main div div div:nth-child(1) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.75);
+}
+#Homepage main div div div:nth-child(1) div:nth-child(2) {
+    width: calc(var(--percentage) / 4);
+}
+#Homepage main div div div:nth-child(2) div:nth-child(1),
+#Homepage main div div div:nth-child(4) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.44);
+}
+#Homepage main div div div:nth-child(2) div:nth-child(2),
+#Homepage main div div div:nth-child(4) div:nth-child(2) {
+    width: calc(var(--percentage) * 0.56);
+}
+#Homepage main div div div:nth-child(3) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.53);
+}
+#Homepage main div div div:nth-child(3) div:nth-child(2) {
+    width: calc(var(--percentage) * 0.47);
+}
+#Homepage main div div div:nth-child(6) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.8);
+}
+#Homepage main div div div:nth-child(6) div:nth-child(2) {
+    width: calc(var(--percentage) / 5);
+}
+#Homepage main div div div:nth-child(7) div:nth-child(1) {
+    width: calc(var(--percentage) * (2 / 3));
+}
+#Homepage main div div div:nth-child(7) div:nth-child(2) {
+    width: calc(var(--percentage) / 3);
+}
+#Homepage main div div div:nth-child(5) div:nth-child(1) {
+    width: calc(var(--percentage) / 11);
+}
+#Homepage main div div div:nth-child(5) div:nth-child(2) {
+    width: calc(var(--percentage) * (10 / 11));
 }

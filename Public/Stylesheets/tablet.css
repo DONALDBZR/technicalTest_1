@@ -43,19 +43,10 @@ body[id*="Customers"] main header div:nth-child(1) {
     border-right: unset;
 }
 #Homepage main div div div {
-    display: block;
+    display: flex;
     width: calc(var(--percentage) / 7);
     border: unset;
     padding: calc(var(--percentage) * 0);
-}
-#Homepage main div div div:nth-child(1) {
-    width: calc(var(--percentage) / 21);
-}
-#Homepage main div div div:nth-child(6) {
-    width: calc(var(--percentage) / 16);
-}
-#Homepage main div div div:nth-child(5) {
-    width: calc(var(--percentage) * (107 / 336));
 }
 #Homepage footer {
     font-size: calc(var(--textSize) * 0.9);
@@ -108,4 +99,54 @@ body[id*="Customers"] main form #response {
 }
 body[id*="Customers"] main form #response h1 {
     margin: calc(var(--percentage) * 0);
+}
+#Homepage main div div div:nth-child(1) {
+    width: calc(var(--percentage) / 20);
+}
+#Homepage main div div div:nth-child(6) {
+    width: calc(var(--percentage) / 14);
+}
+#Homepage main div div div:nth-child(5) {
+    width: calc(var(--percentage) * (43 / 140));
+}
+#Homepage main div div div div {
+    display: block;
+}
+#Homepage main div div div:nth-child(1) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.75);
+}
+#Homepage main div div div:nth-child(1) div:nth-child(2) {
+    width: calc(var(--percentage) / 4);
+}
+#Homepage main div div div:nth-child(2) div:nth-child(1),
+#Homepage main div div div:nth-child(4) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.65);
+}
+#Homepage main div div div:nth-child(2) div:nth-child(2),
+#Homepage main div div div:nth-child(4) div:nth-child(2) {
+    width: calc(var(--percentage) * 0.35);
+}
+#Homepage main div div div:nth-child(3) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.78);
+}
+#Homepage main div div div:nth-child(3) div:nth-child(2) {
+    width: calc(var(--percentage) * 0.22);
+}
+#Homepage main div div div:nth-child(6) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.8);
+}
+#Homepage main div div div:nth-child(6) div:nth-child(2) {
+    width: calc(var(--percentage) / 5);
+}
+#Homepage main div div div:nth-child(7) div:nth-child(1) {
+    width: calc(var(--percentage) * 0.82);
+}
+#Homepage main div div div:nth-child(7) div:nth-child(2) {
+    width: calc(var(--percentage) * 0.18);
+}
+#Homepage main div div div:nth-child(5) div:nth-child(1) {
+    width: calc(var(--percentage) / 6);
+}
+#Homepage main div div div:nth-child(5) div:nth-child(2) {
+    width: calc(var(--percentage) * (5 / 6));
 }
