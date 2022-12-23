@@ -30,6 +30,83 @@ class Application extends React.Component {
             }));
     }
     /**
+     * Allowing the server to sort the data set before rendering
+     * @returns {string}
+     */
+    handleTitleSort() {
+        if (window.location.pathname.includes("?Title=ASC")) {
+            return "/?Title=DESC";
+        } else {
+            return "/?Title=ASC";
+        }
+    }
+    /**
+     * Allowing the server to sort the data set before rendering
+     * @returns {string}
+     */
+    handleFirstNameSort() {
+        if (window.location.pathname.includes("?FirstName=ASC")) {
+            return "/?FirstName=DESC";
+        } else {
+            return "/?FirstName=ASC";
+        }
+    }
+    /**
+     * Allowing the server to sort the data set before rendering
+     * @returns {string}
+     */
+    handleMiddleNameSort() {
+        if (window.location.pathname.includes("?MiddleName=ASC")) {
+            return "/?MiddleName=DESC";
+        } else {
+            return "/?MiddleName=ASC";
+        }
+    }
+    /**
+     * Allowing the server to sort the data set before rendering
+     * @returns {string}
+     */
+    handleLastNameSort() {
+        if (window.location.pathname.includes("?LastName=ASC")) {
+            return "/?LastName=DESC";
+        } else {
+            return "/?LastName=ASC";
+        }
+    }
+    /**
+     * Allowing the server to sort the data set before rendering
+     * @returns {string}
+     */
+    handleEmailSort() {
+        if (window.location.pathname.includes("?Email=ASC")) {
+            return "/?Email=DESC";
+        } else {
+            return "/?Email=ASC";
+        }
+    }
+    /**
+     * Allowing the server to sort the data set before rendering
+     * @returns {string}
+     */
+    handleActiveSort() {
+        if (window.location.pathname.includes("?Active=ASC")) {
+            return "/?Active=DESC";
+        } else {
+            return "/?Active=ASC";
+        }
+    }
+    /**
+     * Allowing the server to sort the data set before rendering
+     * @returns {string}
+     */
+    handleDateCreatedSort() {
+        if (window.location.pathname.includes("?DateCreated=ASC")) {
+            return "/?DateCreated=DESC";
+        } else {
+            return "/?DateCreated=ASC";
+        }
+    }
+    /**
      * Renders the components that are being returned
      * @returns {Application} Component
      */
@@ -66,13 +143,48 @@ class Main extends Application {
                 </header>
                 <div>
                     <div>
-                        <div>Title</div>
-                        <div>First Name</div>
-                        <div>Middle Name</div>
-                        <div>Last Name</div>
-                        <div>Email</div>
-                        <div>Active</div>
-                        <div>Date Created</div>
+                        <div>
+                            <div>Title</div>
+                            <div>
+                                <a href={this.handleTitleSort()} class="fas fa-sort"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>First Name</div>
+                            <div>
+                                <a href={this.handleFirstNameSort()} class="fas fa-sort"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Middle Name</div>
+                            <div>
+                                <a href={this.handleMiddleNameSort()} class="fas fa-sort"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Last Name</div>
+                            <div>
+                                <a href={this.handleLastNameSort()} class="fas fa-sort"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Email</div>
+                            <div>
+                                <a href={this.handleEmailSort()} class="fas fa-sort"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Active</div>
+                            <div>
+                                <a href={this.handleActiveSort()} class="fas fa-sort"></a>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Date Created</div>
+                            <div>
+                                <a href={this.handleDateCreatedSort()} class="fas fa-sort"></a>
+                            </div>
+                        </div>
                     </div>
                     {this.state.customers.map((customer) => {
                         return (
