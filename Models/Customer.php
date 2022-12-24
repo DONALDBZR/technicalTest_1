@@ -188,9 +188,7 @@ class Customer
      */
     public function sortRead(string $field, string $order): void
     {
-        $this->PDO->query("SELECT * FROM TechnicalTest1.Customers ORDER BY :Field :Order");
-        $this->PDO->bind(":Field", $field);
-        $this->PDO->bind(":Order", $order);
+        $this->PDO->query("SELECT * FROM TechnicalTest1.Customers ORDER BY {$field} {$order}");
         $this->PDO->execute();
         $customers = array();
         for ($index = 0; $index < count($this->PDO->resultSet()); $index++) {
