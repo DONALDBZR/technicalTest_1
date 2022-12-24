@@ -19,15 +19,171 @@ class Application extends React.Component {
      * Retrieving the customers data set
      */
     getCustomers() {
-        fetch("/Customers",
-            {
-                method: "GET",
+        if (window.location.pathname.includes("Title")) {
+            if (window.location.pathname.includes("ASC")) {
+                fetch("/Customers/CustomersTitle/ASC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            } else {
+                fetch("/Customers/CustomersTitle/DESC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
             }
-        )
-            .then((response) => response.json())
-            .then((data) => this.setState({
-                customers: data,
-            }));
+        } else if (window.location.pathname.includes("FirstName")) {
+            if (window.location.pathname.includes("ASC")) {
+                fetch("/Customers/CustomersFirstName/ASC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            } else {
+                fetch("/Customers/CustomersFirstName/DESC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            }
+        } else if (window.location.pathname.includes("MiddleName")) {
+            if (window.location.pathname.includes("ASC")) {
+                fetch("/Customers/CustomersMiddleName/ASC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            } else {
+                fetch("/Customers/CustomersMiddleName/DESC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            }
+        } else if (window.location.pathname.includes("LastName")) {
+            if (window.location.pathname.includes("ASC")) {
+                fetch("/Customers/CustomersLastName/ASC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            } else {
+                fetch("/Customers/CustomersLastName/DESC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            }
+        } else if (window.location.pathname.includes("Email")) {
+            if (window.location.pathname.includes("ASC")) {
+                fetch("/Customers/CustomersEmail/ASC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            } else {
+                fetch("/Customers/CustomersEmail/DESC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            }
+        } else if (window.location.pathname.includes("Active")) {
+            if (window.location.pathname.includes("ASC")) {
+                fetch("/Customers/CustomersActive/ASC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            } else {
+                fetch("/Customers/CustomersActive/DESC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            }
+        } else if (window.location.pathname.includes("DateCreated")) {
+            if (window.location.pathname.includes("ASC")) {
+                fetch("/Customers/CustomersDateCreated/ASC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            } else {
+                fetch("/Customers/CustomersDateCreated/DESC",
+                    {
+                        method: "GET",
+                    }
+                )
+                    .then((response) => response.json())
+                    .then((data) => this.setState({
+                        customers: data,
+                    }));
+            }
+        } else {
+            fetch("/Customers",
+                {
+                    method: "GET",
+                }
+            )
+                .then((response) => response.json())
+                .then((data) => this.setState({
+                    customers: data,
+                }));
+        }
     }
     /**
      * Allowing the server to sort the data set before rendering
@@ -45,10 +201,10 @@ class Application extends React.Component {
      * @returns {string}
      */
     handleFirstNameSort() {
-        if (window.location.pathname.includes("?FirstName=ASC")) {
-            return "/?FirstName=DESC";
+        if (window.location.pathname.includes("FirstName=ASC")) {
+            return "/FirstName=DESC";
         } else {
-            return "/?FirstName=ASC";
+            return "/FirstName=ASC";
         }
     }
     /**
@@ -56,10 +212,10 @@ class Application extends React.Component {
      * @returns {string}
      */
     handleMiddleNameSort() {
-        if (window.location.pathname.includes("?MiddleName=ASC")) {
-            return "/?MiddleName=DESC";
+        if (window.location.pathname.includes("MiddleName=ASC")) {
+            return "/MiddleName=DESC";
         } else {
-            return "/?MiddleName=ASC";
+            return "/MiddleName=ASC";
         }
     }
     /**
@@ -67,10 +223,10 @@ class Application extends React.Component {
      * @returns {string}
      */
     handleLastNameSort() {
-        if (window.location.pathname.includes("?LastName=ASC")) {
-            return "/?LastName=DESC";
+        if (window.location.pathname.includes("LastName=ASC")) {
+            return "/LastName=DESC";
         } else {
-            return "/?LastName=ASC";
+            return "/LastName=ASC";
         }
     }
     /**
@@ -78,10 +234,10 @@ class Application extends React.Component {
      * @returns {string}
      */
     handleEmailSort() {
-        if (window.location.pathname.includes("?Email=ASC")) {
-            return "/?Email=DESC";
+        if (window.location.pathname.includes("Email=ASC")) {
+            return "/Email=DESC";
         } else {
-            return "/?Email=ASC";
+            return "/Email=ASC";
         }
     }
     /**
@@ -89,10 +245,10 @@ class Application extends React.Component {
      * @returns {string}
      */
     handleActiveSort() {
-        if (window.location.pathname.includes("?Active=ASC")) {
-            return "/?Active=DESC";
+        if (window.location.pathname.includes("Active=ASC")) {
+            return "/Active=DESC";
         } else {
-            return "/?Active=ASC";
+            return "/Active=ASC";
         }
     }
     /**
@@ -100,10 +256,10 @@ class Application extends React.Component {
      * @returns {string}
      */
     handleDateCreatedSort() {
-        if (window.location.pathname.includes("?DateCreated=ASC")) {
-            return "/?DateCreated=DESC";
+        if (window.location.pathname.includes("DateCreated=ASC")) {
+            return "/DateCreated=DESC";
         } else {
-            return "/?DateCreated=ASC";
+            return "/DateCreated=ASC";
         }
     }
     /**
