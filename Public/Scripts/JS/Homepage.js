@@ -345,7 +345,14 @@ class Application extends React.Component {
  */
 class Header extends Application {
     render() {
-        return <header>Customer Application</header>;
+        return (
+            <header>
+                <div>Customer Application</div>
+                <div>
+                    <a href="/Factorial">Factorial Calculator</a>
+                </div>
+            </header>
+        );
     }
 }
 /**
