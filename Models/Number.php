@@ -10,7 +10,7 @@ class Number
      */
     private int | float $input;
     /**
-     * Input
+     * Output
      */
     private int | float | bool $output;
     public function __construct()
