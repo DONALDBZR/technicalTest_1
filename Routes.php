@@ -96,6 +96,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
             case '/Customers/CustomersDateCreated/DESC':
                 $Router = new Router("GET", "/Customers/CustomersDateCreated/DESC", "/Controllers/CustomersRead.php");
                 break;
+            case '/Search=' . str_replace("/Search=", "", $_SERVER['REQUEST_URI']):
+                $Router = new Router("GET", '/Search=' . str_replace("/Search=", "", $_SERVER['REQUEST_URI']), "/Views/Homepage.php");
+                break;
+            case '/Customers/Search':
+                $Router = new Router("GET", "/Customers/Search", "/Controllers/CustomersRead.php");
+                break;
         }
         break;
     case 'POST':

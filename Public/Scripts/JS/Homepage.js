@@ -18,6 +18,16 @@ class Application extends React.Component {
              * @type {string}
              */
             search: "",
+            /**
+             * The status returned from the request
+             * @type {int}
+             */
+            status: 0,
+            /**
+             * The message that will be displayed to the user
+             * @type {string}
+             */
+            message: "",
         };
     }
     /**
@@ -178,6 +188,25 @@ class Application extends React.Component {
                         customers: data,
                     }));
             }
+        } else if (window.location.pathname.includes("Search")) {
+            fetch("/Customers/Search",
+                {
+                    method: "GET",
+                }
+            )
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.status != null && data.message != null) {
+                        this.setState({
+                            status: data.status,
+                            message: data.message,
+                        })
+                    } else {
+                        this.setState({
+                            customers: data,
+                        })
+                    }
+                });
         } else {
             fetch("/Customers",
                 {
@@ -280,6 +309,30 @@ class Application extends React.Component {
         });
     }
     /**
+     * Handling the data retrieved from the web server
+     * @returns {Application}
+     */
+    handleCustomers() {
+        if (this.state.customers.length == 0) {
+            return (
+                <div style={{ justifyContent: "center" }}>
+                    <h1 style={{ color: this.handleResponseStatus() }}>{this.state.message}</h1>
+                </div>
+            );
+        }
+    }
+    /**
+     * Handling the status sent by the web server
+     * @returns {string}
+     */
+    handleResponseStatus() {
+        if (this.state.status == 0) {
+            return "rgb(0%, 100%, 0%)";
+        } else {
+            return "rgb(100%, 0%, 0%)";
+        }
+    }
+    /**
      * Renders the components that are being returned
      * @returns {Application} Component
      */
@@ -315,7 +368,7 @@ class Main extends Application {
                     </div>
                     <div>
                         <input type="search" name="search" placeholder="Search..." value={this.state.search} onChange={this.handleChange.bind(this)} required />
-                        <a href={`/Customers/Search=${this.state.search}`} class="fa fa-search"></a>
+                        <a href={`/Search=${this.state.search}`} class="fa fa-search"></a>
                     </div>
                 </header>
                 <div>
@@ -363,6 +416,7 @@ class Main extends Application {
                             </div>
                         </div>
                     </div>
+                    {this.handleCustomers()}
                     {this.state.customers.map((customer) => {
                         return (
                             <div>

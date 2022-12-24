@@ -209,4 +209,38 @@ class Customer
         header('Content-Type: application/json', true, 200);
         echo json_encode($response);
     }
+    /**
+     * Reading all the data from the database while filtering against the value provided
+     */
+    public function filterRead(string $value): void
+    {
+        $this->PDO->query("SELECT * FROM TechnicalTest1.Customers WHERE CustomersTitle LIKE :search OR CustomersFirstName LIKE :search OR CustomersMiddleName LIKE :search OR CustomersLastName LIKE :search OR CustomersMailAddress LIKE :search OR CustomersActive LIKE :search OR CustomersDateCreated LIKE :search");
+        $this->PDO->bind(":search", "%{$value}%");
+        $this->PDO->execute();
+        if (!empty($this->PDO->resultSet())) {
+            $customers = array();
+            for ($index = 0; $index < count($this->PDO->resultSet()); $index++) {
+                $customer = array(
+                    "id" => $this->PDO->resultSet()[$index]['CustomersId'],
+                    "title" => $this->PDO->resultSet()[$index]['CustomersTitle'],
+                    "firstName" => $this->PDO->resultSet()[$index]['CustomersFirstName'],
+                    "middleName" => $this->PDO->resultSet()[$index]['CustomersMiddleName'],
+                    "lastName" => $this->PDO->resultSet()[$index]['CustomersLastName'],
+                    "mailAddress" => $this->PDO->resultSet()[$index]['CustomersMailAddress'],
+                    "active" => $this->PDO->resultSet()[$index]['CustomersActive'],
+                    "dateCreated" => $this->PDO->resultSet()[$index]['CustomersDateCreated']
+                );
+                array_push($customers, $customer);
+            }
+            $_SESSION["Customers"] = $customers;
+            $response = $_SESSION["Customers"];
+        } else {
+            $response = array(
+                "status" => 2,
+                "message" => "No Customer!"
+            );
+        }
+        header('Content-Type: application/json', true, 200);
+        echo json_encode($response);
+    }
 }
