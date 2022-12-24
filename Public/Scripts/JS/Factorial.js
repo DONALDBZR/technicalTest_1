@@ -69,9 +69,12 @@ class Header extends Application {
     render() {
         return (
             <header>
-                <div>Factorial Calculator</div>
+                <div>Integer Application</div>
                 <div>
                     <a href="/">Customer Application</a>
+                </div>
+                <div>
+                    <a href="/">String Application</a>
                 </div>
             </header>
         );

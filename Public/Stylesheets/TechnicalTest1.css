@@ -36,17 +36,15 @@ main header {
     background-color: var(--color1);
     color: var(--color3);
 }
-main header div:nth-child(2) a,
 body[id*="Customers"] main div a,
 main div div div a,
 main header div:nth-child(3) a,
-header div:nth-child(2) a {
+header div a {
     color: var(--color4);
     text-decoration: none;
 }
-main header div:nth-child(2) a:hover,
 body[id*="Customers"] main div a:hover,
-header div:nth-child(2) a:hover {
+header div a:hover {
     text-decoration: underline;
 }
 main div div:nth-child(1) div {
