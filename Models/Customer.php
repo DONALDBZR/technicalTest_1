@@ -183,4 +183,32 @@ class Customer
         header('Content-Type: application/json', true, 200);
         echo json_encode($response);
     }
+    /**
+     * Reading all the data from the database while sorting against the field and the order
+     */
+    public function sortRead(string $field, string $order): void
+    {
+        $this->PDO->query("SELECT * FROM TechnicalTest1.Customers ORDER BY :Field :Order");
+        $this->PDO->bind(":Field", $field);
+        $this->PDO->bind(":Order", $order);
+        $this->PDO->execute();
+        $customers = array();
+        for ($index = 0; $index < count($this->PDO->resultSet()); $index++) {
+            $customer = array(
+                "id" => $this->PDO->resultSet()[$index]['CustomersId'],
+                "title" => $this->PDO->resultSet()[$index]['CustomersTitle'],
+                "firstName" => $this->PDO->resultSet()[$index]['CustomersFirstName'],
+                "middleName" => $this->PDO->resultSet()[$index]['CustomersMiddleName'],
+                "lastName" => $this->PDO->resultSet()[$index]['CustomersLastName'],
+                "mailAddress" => $this->PDO->resultSet()[$index]['CustomersMailAddress'],
+                "active" => $this->PDO->resultSet()[$index]['CustomersActive'],
+                "dateCreated" => $this->PDO->resultSet()[$index]['CustomersDateCreated']
+            );
+            array_push($customers, $customer);
+        }
+        $_SESSION["Customers"] = $customers;
+        $response = $_SESSION["Customers"];
+        header('Content-Type: application/json', true, 200);
+        echo json_encode($response);
+    }
 }
