@@ -147,3 +147,17 @@ main div div div:nth-child(5) div:nth-child(1) {
 main div div div:nth-child(5) div:nth-child(2) {
     width: calc(var(--percentage) * (10 / 11));
 }
+main header div:nth-child(3) {
+    width: calc(var(--percentage) / 3);
+    margin: calc(var(--percentage) / 200) calc(var(--percentage) / 3);
+    display: flex;
+    font-size: var(--textSize);
+}
+main header div:nth-child(3) input {
+    width: calc(var(--percentage) * (19 / 20));
+    font-size: var(--textSize);
+}
+main header div:nth-child(3) a {
+    width: calc(var(--percentage) / 20);
+    padding: calc(var(--percentage) / 100) calc(var(--percentage) / 200);
+}

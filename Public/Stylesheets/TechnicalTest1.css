@@ -38,7 +38,8 @@ main header {
 }
 main header div:nth-child(2) a,
 body[id*="Customers"] main div a,
-main div div div a {
+main div div div a,
+main header div:nth-child(3) a {
     color: var(--color4);
     text-decoration: none;
 }
@@ -72,4 +73,10 @@ main div div div {
 }
 main div div div a:hover {
     color: var(--color2);
+}
+main header div:nth-child(3) input::placeholder {
+    color: var(--color5);
+}
+main header div:nth-child(3) a:hover {
+    color: var(--color5);
 }
