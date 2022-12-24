@@ -13,6 +13,11 @@ class Application extends React.Component {
              * @type {array}
              */
             customers: [],
+            /**
+             * Data to be searched
+             * @type {string}
+             */
+            search: "",
         };
     }
     /**
@@ -263,6 +268,18 @@ class Application extends React.Component {
         }
     }
     /**
+     * Handling any change that is made in the user interface
+     * @param {Event} event
+     */
+    handleChange(event) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        this.setState({
+            [name]: value,
+        });
+    }
+    /**
      * Renders the components that are being returned
      * @returns {Application} Component
      */
@@ -295,6 +312,10 @@ class Main extends Application {
                     <div>Home</div>
                     <div>
                         <a href="/Customers/New">Create New</a>
+                    </div>
+                    <div>
+                        <input type="search" name="search" placeholder="Search..." value={this.state.search} onChange={this.handleChange.bind(this)} required />
+                        <a href={`/Customers/Search=${this.state.search}`} class="fa fa-search"></a>
                     </div>
                 </header>
                 <div>
