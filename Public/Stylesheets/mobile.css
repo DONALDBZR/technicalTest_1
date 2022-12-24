@@ -182,3 +182,24 @@ main header div:nth-child(3) a {
     width: calc(var(--percentage) / 20);
     padding: calc(var(--percentage) / 50) calc(var(--percentage) / 200);
 }
+#Factorial header div:nth-child(1) {
+    width: var(--percentage);
+}
+#Factorial header div:nth-child(2) {
+    width: var(--percentage);
+}
+#Factorial main div form {
+    width: calc(var(--percentage) / 4);
+    margin: calc(var(--percentage) * 0) calc(var(--percentage) * (3 / 8));
+}
+#Factorial main div form input {
+    width: var(--percentage);
+}
+#Factorial main div form div {
+    display: flex;
+    justify-content: center;
+    border: none;
+    padding: calc(var(--percentage) * 0);
+    margin: calc(var(--percentage) / 50) calc(var(--percentage) * 0);
+    width: var(--percentage);
+}
