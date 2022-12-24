@@ -12,7 +12,7 @@ class Number
     /**
      * Input
      */
-    private int | float $output;
+    private int | float | bool $output;
     public function __construct()
     {
     }
@@ -24,11 +24,11 @@ class Number
     {
         $this->input = $input;
     }
-    public function getOutput(): int | float
+    public function getOutput(): int | float | bool
     {
         return $this->output;
     }
-    public function setOutput(int | float $output): void
+    public function setOutput(int | float | bool $output): void
     {
         $this->output = $output;
     }
@@ -48,7 +48,26 @@ class Number
             "status" => 0,
             "message" => $this->getOutput()
         );
-        header('Content-Type: application/json', true, 300);
+        header('Content-Type: application/json', true, 200);
+        echo json_encode($response);
+    }
+    /**
+     * Checking if a number is even or odd
+     */
+    public function modulo(): void
+    {
+        $request = json_decode(file_get_contents("php://input"));
+        $this->setInput($request->value);
+        if ($this->getInput() % 2 == 0) {
+            $this->setOutput(true);
+        } else {
+            $this->setOutput(false);
+        }
+        $response = array(
+            "status" => 0,
+            "message" => $this->getOutput()
+        );
+        header('Content-Type: application/json', true, 200);
         echo json_encode($response);
     }
 }

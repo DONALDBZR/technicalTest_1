@@ -60,14 +60,14 @@ body[id*="Customers"] main form div:nth-child(6) div:nth-child(2) div {
     font-weight: normal;
 }
 body[id*="Customers"] main form div:nth-child(7) button,
-#Factorial main form div button {
+#Integer main form div button {
     cursor: pointer;
     font-weight: bold;
     background-color: var(--color2);
     color: var(--color1);
 }
 body[id*="Customers"] main form div:nth-child(7) button:hover,
-#Factorial main form div button:hover {
+#Integer main form div button:hover {
     background-color: var(--color1);
     color: var(--color2);
 }

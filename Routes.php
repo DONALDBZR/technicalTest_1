@@ -102,8 +102,8 @@ switch ($_SERVER['REQUEST_METHOD']) {
             case '/Customers/Search':
                 $Router = new Router("GET", "/Customers/Search", "/Controllers/CustomersRead.php");
                 break;
-            case '/Factorial':
-                $Router = new Router("GET", "/Factorial", "/Views/Factorial.php");
+            case '/Integer':
+                $Router = new Router("GET", "/Integer", "/Views/Integer.php");
                 break;
         }
         break;
@@ -111,6 +111,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
         switch ($_SERVER['REQUEST_URI']) {
             case '/Customers/Create':
                 $Router = new Router("POST", "/Customers/Create", "/Controllers/CustomersCreate.php");
+                break;
+            case '/Integer/Factorial':
+                $Router = new Router("POST", "/Integer/Factorial", "/Controllers/FactorialCalculator.php");
+                break;
+            case '/Integer/Modulo':
+                $Router = new Router("POST", "/Integer/Modulo", "/Controllers/ModuloCalculator.php");
                 break;
         }
 }
