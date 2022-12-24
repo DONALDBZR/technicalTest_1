@@ -60,17 +60,17 @@ switch ($_SERVER['REQUEST_METHOD']) {
             case '/Customers/CustomersLastName/DESC':
                 $Router = new Router("GET", "/Customers/CustomersLastName/DESC", "/Controllers/CustomersRead.php");
                 break;
-            case '/Email=ASC':
-                $Router = new Router("GET", "/Email=ASC", "/Views/Homepage.php");
+            case '/MailAddress=ASC':
+                $Router = new Router("GET", "/MailAddress=ASC", "/Views/Homepage.php");
                 break;
-            case '/Email=DESC':
-                $Router = new Router("GET", "/Email=DESC", "/Views/Homepage.php");
+            case '/MailAddress=DESC':
+                $Router = new Router("GET", "/MailAddress=DESC", "/Views/Homepage.php");
                 break;
-            case '/Customers/CustomersEmail/ASC':
-                $Router = new Router("GET", "/Customers/CustomersEmail/ASC", "/Controllers/CustomersRead.php");
+            case '/Customers/CustomersMailAddress/ASC':
+                $Router = new Router("GET", "/Customers/CustomersMailAddress/ASC", "/Controllers/CustomersRead.php");
                 break;
-            case '/Customers/CustomersEmail/DESC':
-                $Router = new Router("GET", "/Customers/CustomersEmail/DESC", "/Controllers/CustomersRead.php");
+            case '/Customers/CustomersMailAddress/DESC':
+                $Router = new Router("GET", "/Customers/CustomersMailAddress/DESC", "/Controllers/CustomersRead.php");
                 break;
             case '/Active=ASC':
                 $Router = new Router("GET", "/Active=ASC", "/Views/Homepage.php");

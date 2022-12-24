@@ -107,9 +107,9 @@ class Application extends React.Component {
                         customers: data,
                     }));
             }
-        } else if (window.location.pathname.includes("Email")) {
+        } else if (window.location.pathname.includes("MailAddress")) {
             if (window.location.pathname.includes("ASC")) {
-                fetch("/Customers/CustomersEmail/ASC",
+                fetch("/Customers/CustomersMailAddress/ASC",
                     {
                         method: "GET",
                     }
@@ -119,7 +119,7 @@ class Application extends React.Component {
                         customers: data,
                     }));
             } else {
-                fetch("/Customers/CustomersEmail/DESC",
+                fetch("/Customers/CustomersMailAddress/DESC",
                     {
                         method: "GET",
                     }
@@ -234,10 +234,10 @@ class Application extends React.Component {
      * @returns {string}
      */
     handleEmailSort() {
-        if (window.location.pathname.includes("Email=ASC")) {
-            return "/Email=DESC";
+        if (window.location.pathname.includes("MailAddress=ASC")) {
+            return "/MailAddress=DESC";
         } else {
-            return "/Email=ASC";
+            return "/MailAddress=ASC";
         }
     }
     /**
