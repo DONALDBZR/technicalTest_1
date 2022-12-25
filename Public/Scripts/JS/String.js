@@ -135,7 +135,7 @@ class Main extends Application {
                 <div>
                     <form method="POST" onSubmit={this.handleSubmit.bind(this)} id="palindrome">
                         <div>Palindrome Finder</div>
-                        <input type="number" name="input" value={this.state.input} onChange={this.handleChange.bind(this)} placeholder="Value" required />
+                        <input type="text" name="input" value={this.state.input} onChange={this.handleChange.bind(this)} placeholder="Value" required />
                         <div>
                             <button>Find</button>
                         </div>
