@@ -20,9 +20,9 @@ class Application extends React.Component {
             input2: 0,
             /**
              * The data returned by the server
-             * @type {int}
+             * @type {string}
              */
-            message: 0,
+            message: "",
         };
     }
     /**
@@ -45,7 +45,7 @@ class Application extends React.Component {
                     .then((response) => response.json())
                     .then((data) =>
                         this.setState({
-                            message: data.message,
+                            message: String(data.message),
                         })
                     );
                 break;
@@ -62,7 +62,7 @@ class Application extends React.Component {
                     .then((response) => response.json())
                     .then((data) =>
                         this.setState({
-                            message: data.message,
+                            message: String(data.message),
                         })
                     );
                 break;
