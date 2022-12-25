@@ -96,7 +96,9 @@ body[id*="Customers"] main form div:nth-child(6) div:nth-child(2) div input {
 body[id*="Customers"] main form div:nth-child(7) {
     justify-content: center;
 }
-body[id*="Customers"] main form div:nth-child(7) button {
+body[id*="Customers"] main form div:nth-child(7) button,
+#Integer main form div button,
+#String main form div button {
     padding: calc(var(--percentage) / 80) calc(var(--percentage) / 40);
     font-size: calc(var(--textSize) * 1.1);
     border: none;
@@ -179,14 +181,17 @@ main header div:nth-child(3) a {
 #Integer header div:nth-child(2) {
     width: calc(var(--percentage) * (2 / 3));
 }
-#Integer main div form {
+#Integer main div form,
+#String main div form {
     width: calc(var(--percentage) / 2);
     margin: calc(var(--percentage) * 0) calc(var(--percentage) / 4);
 }
-#Integer main div form input {
+#Integer main div form input,
+#String main div form input {
     width: var(--percentage);
 }
-#Integer main div form div {
+#Integer main div form div,
+#String main div form div {
     display: flex;
     justify-content: center;
     border: none;
@@ -194,15 +199,21 @@ main header div:nth-child(3) a {
     margin: calc(var(--percentage) / 50) calc(var(--percentage) * 0);
     width: var(--percentage);
 }
-#Integer main {
+#Integer main,
+#String main {
     display: flex;
     flex-wrap: wrap;
     width: calc(var(--percentage) * 0.98);
 }
-#Integer main div {
+#Integer main div,
+#String main div {
     width: calc(var(--percentage) / 2);
 }
-#Integer main div:nth-child(3) {
+#Integer main div:nth-child(3),
+#String main div:nth-child(3) {
     text-align: center;
     width: var(--percentage);
+}
+#String main div:nth-child(1) form input {
+    margin: calc(var(--percentage) / 100) calc(var(--percentage) * 0);
 }
