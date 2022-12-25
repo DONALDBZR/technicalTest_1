@@ -105,6 +105,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
             case '/Integer':
                 $Router = new Router("GET", "/Integer", "/Views/Integer.php");
                 break;
+            case '/String':
+                $Router = new Router("GET", "/String", "/Views/String.php");
+                break;
         }
         break;
     case 'POST':
@@ -117,6 +120,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 break;
             case '/Integer/Modulo':
                 $Router = new Router("POST", "/Integer/Modulo", "/Controllers/ModuloCalculator.php");
+                break;
+            case '/String/Needle':
+                $Router = new Router("POST", "/String/Needle", "/Controllers/NeedleFinder.php");
+                break;
+            case '/String/Palindrome':
+                $Router = new Router("POST", "/String/Palindrome", "/Controllers/PalindromeFinder.php");
                 break;
         }
 }
