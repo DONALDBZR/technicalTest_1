@@ -65,6 +65,7 @@ body[id*="Customers"] main form div:nth-child(7) button,
     font-weight: bold;
     background-color: var(--color2);
     color: var(--color1);
+    border: none;
 }
 body[id*="Customers"] main form div:nth-child(7) button:hover,
 #Integer main form div button:hover {
